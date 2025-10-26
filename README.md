@@ -19,7 +19,7 @@ Está diseñada para que empieces a desarrollar sin complicaciones, con un **rou
 * 🎨 **Estructura profesional**: organización modular clara y escalable.
 * 📱 **Responsive ready**: diseño adaptable a móviles y tabletas.
 * 🛣️ **Routing SPA**: navegación fluida sin recargar la página.
-* 🌙 **Modo oscuro**: listo para activar con CSS variables.
+* 🌙 **Modo oscuro**: listo para activar con CSS variables. (Activación manual)
 
 ---
 
@@ -27,7 +27,7 @@ Está diseñada para que empieces a desarrollar sin complicaciones, con un **rou
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/tu-usuario/flutcom.git
+git clone [https://github.com/Mrblour/FlutCom-SPAv1.git]
 
 # Accede al directorio
 cd flutcom
@@ -93,7 +93,7 @@ window.location.hash = 'dashboard';
 * 📊 Dashboards administrativos
 * 🛍️ Portafolios y sitios personales
 * 🔧 Herramientas web simples
-* 🎨 Prototipos rápidos
+* 🎨 Prototipos rápidos 
 
 ---
 
@@ -135,7 +135,7 @@ MIT License - Usa libremente en tus proyectos
 **Instalación rápida:**
 
 ```bash
-git clone https://github.com/tu-usuario/flutcom.git
+git clone https://github.com/Mrblour/FlutCom-SPAv1.git
 cd flutcom
 # Abre index.html y empieza
 ```
