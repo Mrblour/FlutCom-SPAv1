@@ -1,158 +1,149 @@
-# 📝 **FlutCom - SPA - v1**
+# 📝 FlutCom - SPA Vanilla JS v1
 
-```markdown
-# 🎯 FlutCom - Plantilla SPA Vanilla JS
-
-**Tu punto de partida para Single Page Applications**  
-*Estructura profesional lista para usar - Solo HTML, CSS y JavaScript puro*
+**Tu punto de partida para Single Page Applications**
+*Estructura profesional lista para usar: solo HTML, CSS y JavaScript puro.*
 
 ---
 
-## ⚡ **¿Qué es FlutCom?**
+## ⚡ Qué es FlutCom
 
-FlutCom es una **plantilla SPA pre-configurada** con todo lo necesario para crear aplicaciones web modernas usando **solo tecnologías nativas**: HTML5, CSS3 y JavaScript vanilla.
-
-### 🎯 **¿Por qué FlutCom?**
-
-- 🚀 **Sin Frameworks** - Solo JS vanilla, sin dependencias
-- ⚡ **Cero Configuración** - Clona y empieza a codificar
-- 🎨 **Estructura Profesional** - Organización clara y escalable
-- 📱 **Responsive Ready** - Diseño adaptable incluido
-- 🛣️ **Routing SPA** - Navegación sin recargas de página
-- 🌙 **Modo Oscuro** - Implementado con CSS variables
+FlutCom es una **plantilla SPA preconfigurada** para crear aplicaciones web modernas usando **solo tecnologías nativas**: HTML5, CSS3 y JavaScript vanilla.
+Está diseñada para que empieces a desarrollar sin complicaciones, con un **routing SPA, modo oscuro y diseño responsive** ya integrados.
 
 ---
 
-## 🚀 **Comienza en 30 Segundos**
+## 🎯 Por qué usar FlutCom
+
+* 🚀 **Sin frameworks**: solo JavaScript vanilla, sin dependencias externas.
+* ⚡ **Cero configuración**: clona y empieza a codificar.
+* 🎨 **Estructura profesional**: organización modular clara y escalable.
+* 📱 **Responsive ready**: diseño adaptable a móviles y tabletas.
+* 🛣️ **Routing SPA**: navegación fluida sin recargar la página.
+* 🌙 **Modo oscuro**: listo para activar con CSS variables.
+
+---
+
+## 🚀 Instalación rápida
 
 ```bash
 # Clona el repositorio
 git clone https://github.com/tu-usuario/flutcom.git
 
-# Entra al directorio
+# Accede al directorio
 cd flutcom
 
-# ¡Listo! Abre index.html en tu navegador
+# Abre index.html en tu navegador
 # o usa un servidor local:
 python -m http.server 3000
 ```
 
 ---
 
-## 📁 **Estructura del Proyecto**
+## 📁 Estructura del proyecto
 
 ```
 flutcom/
-├── 📦 public/          # Assets estáticos
+├── 📦 public/          # Assets estáticos (CSS, JS, imágenes)
 ├── 📂 resources/
-│   ├── 🎨 views/       # Tus páginas HTML
-│   ├── 🔧 partials/    # Componentes reutilizables  
+│   ├── 🎨 views/       # Páginas HTML dinámicas
+│   ├── 🔧 partials/    # Componentes reutilizables
 │   └── 🏗️ layaut/      # Layout base
-├── ⚙️ config/          # Configuración y motor
+├── ⚙️ config/          # Configuración y motor de la SPA
 └── 🚀 index.html       # Punto de entrada
 ```
 
 ---
 
-## 🎨 **Características Técnicas**
+## 🎨 Características técnicas
 
-### **SPA Routing System**
+### SPA Routing System
+
 ```javascript
 // Navegación sin recargas
 window.location.hash = 'dashboard';
 // Carga: resources/views/dashboard.html
 ```
 
-### **Architecture Modular**
-- **Views** → Páginas completas (`home.html`, `about.html`)
-- **Partials** → Componentes (`navbar.html`, `footer.html`)  
-- **Layout** → Plantilla base común
+### Arquitectura modular
 
-### **CSS Ready Features**
-- Variables CSS para theming
-- Animaciones y transiciones
-- Grid y Flexbox layouts
-- Modo oscuro automático
+* **Views** → Páginas completas (`home.html`, `about.html`, etc.)
+* **Partials** → Componentes reutilizables (`navbar.html`, `footer.html`)
+* **Layout** → Plantilla base común para todas las vistas
 
----
+### CSS listo para usar
 
-## 📝 **Cómo Usar**
-
-1. **Añade tu contenido** en `resources/views/`
-2. **Personaliza los estilos** en `public/css/`
-3. **Modifica la configuración** en `config/app.js`
-4. **Añade nuevas rutas** en `public/js/routes.js`
+* Variables CSS para theming y modo oscuro
+* Animaciones y transiciones suaves
+* Grid y Flexbox para layouts responsivos
 
 ---
 
-## 🎯 **Casos de Uso Perfectos**
+## 📝 Cómo usar
 
-- 🏢 **Landing Pages** corporativas
-- 📊 **Dashboards** administrativos
-- 🛍️ **Portafolios** y sitios personales
-- 🔧 **Herramientas** web simples
-- 🎨 **Prototipos** rápidos
-
----
-
-## 🤝 **Contribuir**
-
-¿Tienes ideas para mejorar FlutCom?  
-¡Abre un issue o envía un pull request!
+1. Añade tu contenido en `resources/views/`.
+2. Personaliza los estilos en `public/css/`.
+3. Modifica la configuración en `config/app.js`.
+4. Agrega nuevas rutas en `public/js/routes.js`.
 
 ---
 
-## 📜 **Licencia**
+## 🎯 Casos de uso ideales
+
+* 🏢 Landing pages corporativas
+* 📊 Dashboards administrativos
+* 🛍️ Portafolios y sitios personales
+* 🔧 Herramientas web simples
+* 🎨 Prototipos rápidos
+
+---
+
+## 🤝 Contribuir
+
+¿Tienes ideas para mejorar FlutCom?
+Abre un issue o envía un pull request.
+
+---
+
+## 📜 Licencia
 
 MIT License - Usa libremente en tus proyectos
 
 ---
 
-**¿Listo para comenzar?**  
-✨ `git clone` y empieza a construir tu aplicación hoy mismo.
-```
+## 📢 Anuncio para Discord
 
----
-
-# 📢 **ANUNCIO PARA DISCORD**
-
-```markdown
 🎉 **¡NUEVO LANZAMIENTO: FLUTCOM YA ESTÁ DISPONIBLE!** 🎉
 
-**¿Cansado de configurar proyectos desde cero cada vez?** ¡Tenemos la solución!
+🚀 Plantilla SPA en vanilla JS lista para usar
 
-🚀 **Presentamos FlutCom** - Plantilla SPA en vanilla JS lista para usar
+**Incluye:**
+✅ Cero configuración
+✅ Solo HTML, CSS y JS vanilla
+✅ Estructura SPA profesional con routing
+✅ Modo oscuro automático
+✅ 100% responsive
+✅ Animaciones CSS entre vistas
 
-**✨ ¿Qué incluye?**
-✅ **CERO configuración** - clona y lista  
-✅ **SOLO tecnologías nativas** (HTML, CSS, JS vanilla)  
-✅ **Estructura SPA profesional** con routing  
-✅ **Modo oscuro** automático incluido  
-✅ **100% responsive** y adaptable  
-✅ **Animaciones CSS** entre vistas
+**Perfecto para:**
 
-**🎯 Perfecto para:**
-- 🏢 Landing pages corporativas rápidas
-- 📊 Dashboards administrativos  
-- 👨‍💻 Portafolios personales
-- ⚡ Prototipos en tiempo record
-- 🔧 Herramientas web simples
+* Landing pages corporativas
+* Dashboards administrativos
+* Portafolios personales
+* Prototipos rápidos
+* Herramientas web simples
 
-**📥 ¡Pruébalo ahora!**
+**Instalación rápida:**
+
 ```bash
 git clone https://github.com/tu-usuario/flutcom.git
 cd flutcom
-# ¡Listo! Abre index.html y empieza
+# Abre index.html y empieza
 ```
 
-**🆓 Totalmente gratis y open source - MIT License**
+🆓 Totalmente gratis y open source - MIT License
 
-💬 **¿Ya lo probaste?** ¡Cuéntanos tu experiencia en el canal!
-🔧 **¿Encontraste un bug?** Abre un issue en GitHub
+💬 Comparte tu experiencia en Discord o abre un issue si encuentras bugs.
 
 #VanillaJS #SPA #WebDev #Plantillas #OpenSource #HTML #CSS #JavaScript
 
-👉 **Enlace al repositorio:** https://github.com/tu-usuario/flutcom
-```
-
-¿Necesitas que ajuste algo específico para tu comunidad de Discord o el perfil de GitHub?
+👉 [Repositorio en GitHub](https://github.com/tu-usuario/flutcom)
