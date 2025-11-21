@@ -1,149 +1,116 @@
-# 📝 FlutCom - SPA Vanilla JS v1
+# ⚡ Flutcom: Framework SPAV "Vanilla"
 
-**Tu punto de partida para Single Page Applications**
-*Estructura profesional lista para usar: solo HTML, CSS y JavaScript puro.*
+> **Arquitectura ligera sin dependencias.** Vanilla JS puro, enrutamiento Hash y renderizado directo. Ideal para entender cómo funcionan las SPAs por dentro o para proyectos que requieren máximo rendimiento con cero overhead.
 
----
+![Flutcom Banner](resources/img/banner-placeholder.png)
 
-## ⚡ Qué es FlutCom
+## 🚀 ¿Por qué Flutcom?
 
-FlutCom es una **plantilla SPA preconfigurada** para crear aplicaciones web modernas usando **solo tecnologías nativas**: HTML5, CSS3 y JavaScript vanilla.
-Está diseñada para que empieces a desarrollar sin complicaciones, con un **routing SPA, modo oscuro y diseño responsive** ya integrados.
+En un mundo dominado por React, Vue y Angular, **Flutcom** es un experimento y una declaración de intenciones: **No siempre necesitas un Virtual DOM.**
 
----
-
-## 🎯 Por qué usar FlutCom
-
-* 🚀 **Sin frameworks**: solo JavaScript vanilla, sin dependencias externas.
-* ⚡ **Cero configuración**: clona y empieza a codificar.
-* 🎨 **Estructura profesional**: organización modular clara y escalable.
-* 📱 **Responsive ready**: diseño adaptable a móviles y tabletas.
-* 🛣️ **Routing SPA**: navegación fluida sin recargar la página.
-* 🌙 **Modo oscuro**: listo para activar con CSS variables. (Activación manual)
+*   **0 Dependencias de Runtime:** El núcleo es 100% JavaScript nativo.
+*   **Rendimiento Absurdo:** Sin hidratación, sin diffing complejo. Solo DOM real.
+*   **Tailwind CSS v4:** Integrado nativamente para el estilizado.
+*   **Enrutamiento Hash:** Simple, robusto y compatible con cualquier hosting estático (GitHub Pages, Vercel, Netlify) sin configuración de servidor.
 
 ---
 
-## 🚀 Instalación rápida
+## 🛠️ Instalación y Uso
 
+### Prerrequisitos
+*   Node.js (solo para el entorno de desarrollo y compilación de Tailwind).
+
+### 1. Clonar el repositorio
 ```bash
-# Clona el repositorio
-git clone [https://github.com/Mrblour/FlutCom-SPAv1.git]
-
-# Accede al directorio
+git clone https://github.com/tu-usuario/flutcom.git
 cd flutcom
+```
 
-# Abre index.html en tu navegador
-# o usa un servidor local:
-python -m http.server 3000
+### 2. Instalar dependencias
+```bash
+npm install
+```
+
+### 3. Iniciar entorno de desarrollo
+Esto iniciará el compilador de Tailwind en modo "watch" y un servidor local.
+```bash
+npm run dev
+```
+Abre tu navegador en `http://localhost:8080` (o el puerto que te indique).
+
+---
+
+## 📂 Estructura del Proyecto
+
+La arquitectura está diseñada para ser intuitiva y escalable:
+
+```text
+/
+├── assets/
+│   ├── css/           # Estilos compilados y fuentes
+│   └── img/           # Imágenes estáticas
+├── config/
+│   ├── core.js        # 🧠 El Cerebro: Router y Loader (No tocar)
+│   ├── main.js        # 🎮 La App: Configuración y lógica de negocio
+│   └── routes.js      # 🗺️ Mapa de rutas y parciales
+├── resources/
+│   ├── components/    # Fragmentos reutilizables (Cards, Botones)
+│   ├── layouts/       # Estructura base (HTML shell)
+│   ├── partials/      # Elementos fijos (Header, Footer)
+│   └── views/         # Páginas completas (Home, Pricing, Docs)
+└── index.html         # Punto de entrada único
 ```
 
 ---
 
-## 📁 Estructura del proyecto
+## 🧑‍💻 Cómo crear una nueva página
 
-```
-flutcom/
-├── 📦 public/          # Assets estáticos (CSS, JS, imágenes)
-├── 📂 resources/
-│   ├── 🎨 views/       # Páginas HTML dinámicas
-│   ├── 🔧 partials/    # Componentes reutilizables
-│   └── 🏗️ layaut/      # Layout base
-├── ⚙️ config/          # Configuración y motor de la SPA
-└── 🚀 index.html       # Punto de entrada
+### 1. Crear el archivo HTML
+Crea un archivo en `resources/views/public/mi-pagina.html`:
+```html
+<section class="pt-32 px-6 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-white">Mi Nueva Página</h1>
+    <p class="text-zinc-400 mt-4">Creada con Flutcom.</p>
+</section>
 ```
 
----
-
-## 🎨 Características técnicas
-
-### SPA Routing System
-
+### 2. Registrar la ruta
+Abre `config/routes.js` y añade tu nueva ruta:
 ```javascript
-// Navegación sin recargas
-window.location.hash = 'dashboard';
-// Carga: resources/views/dashboard.html
+export const navRoutes = {
+  home: "resources/views/public/home.html",
+  nueva: "resources/views/public/mi-pagina.html" // <--- Nueva ruta
+};
 ```
 
-### Arquitectura modular
-
-* **Views** → Páginas completas (`home.html`, `about.html`, etc.)
-* **Partials** → Componentes reutilizables (`navbar.html`, `footer.html`)
-* **Layout** → Plantilla base común para todas las vistas
-
-### CSS listo para usar
-
-* Variables CSS para theming y modo oscuro
-* Animaciones y transiciones suaves
-* Grid y Flexbox para layouts responsivos
+### 3. ¡Listo!
+Ahora puedes acceder navegando a `index.html#nueva`.
 
 ---
 
-## 📝 Cómo usar
+## 🎨 Personalización
 
-1. Añade tu contenido en `resources/views/`.
-2. Personaliza los estilos en `public/css/`.
-3. Modifica la configuración en `config/app.js`.
-4. Agrega nuevas rutas en `public/js/routes.js`.
+### Estilos (Tailwind CSS)
+Edita `src/input.css` para agregar fuentes o estilos globales. Tailwind detectará automáticamente tus clases en los archivos HTML dentro de `resources/`.
+
+### Lógica Global
+Si necesitas scripts que corran en toda la app (analytics, estado global), agrégalos en `config/main.js`.
 
 ---
 
-## 🎯 Casos de uso ideales
+## 📚 Documentación Avanzada
 
-* 🏢 Landing pages corporativas
-* 📊 Dashboards administrativos
-* 🛍️ Portafolios y sitios personales
-* 🔧 Herramientas web simples
-* 🎨 Prototipos rápidos 
+*   [**Core vs Main:**](./explicacion_core_vs_main.md) Entiende la diferencia entre el framework y tu aplicación.
+*   [**Guía de Escalabilidad:**](./guia_escalabilidad_estatica.md) Cómo construir sitios gigantes sin backend.
 
 ---
 
 ## 🤝 Contribuir
 
-¿Tienes ideas para mejorar FlutCom?
-Abre un issue o envía un pull request.
+Este es un proyecto de código abierto. ¡Las PRs son bienvenidas!
+Si encuentras un bug o tienes una idea, abre un Issue.
 
----
+## 📄 Licencia
 
-## 📜 Licencia
+MIT © 2025 Flutcom
 
-MIT License - Usa libremente en tus proyectos
-
----
-
-## 📢 Anuncio para Discord
-
-🎉 **¡NUEVO LANZAMIENTO: FLUTCOM YA ESTÁ DISPONIBLE!** 🎉
-
-🚀 Plantilla SPA en vanilla JS lista para usar
-
-**Incluye:**
-✅ Cero configuración
-✅ Solo HTML, CSS y JS vanilla
-✅ Estructura SPA profesional con routing
-✅ Modo oscuro automático
-✅ 100% responsive
-✅ Animaciones CSS entre vistas
-
-**Perfecto para:**
-
-* Landing pages corporativas
-* Dashboards administrativos
-* Portafolios personales
-* Prototipos rápidos
-* Herramientas web simples
-
-**Instalación rápida:**
-
-```bash
-git clone https://github.com/Mrblour/FlutCom-SPAv1.git
-cd flutcom
-# Abre index.html y empieza
-```
-
-🆓 Totalmente gratis y open source - MIT License
-
-💬 Comparte tu experiencia en Discord o abre un issue si encuentras bugs.
-
-#VanillaJS #SPA #WebDev #Plantillas #OpenSource #HTML #CSS #JavaScript
-
-👉 [Repositorio en GitHub](https://github.com/tu-usuario/flutcom)
